@@ -1,0 +1,243 @@
+* {
+    margin: 0px;
+}
+
+html, body {
+     overflow-x: hidden;
+}
+
+.portada {
+    height: 100vh;
+    background-color: black;
+    background-image:      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./rsc/fondo_transparente.png");
+    background-repeat: repeat;
+    background-size: 50%;
+    position: relative;
+        height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+/* SCROLL */
+
+.scroll-indicator  {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(8px, 1.5vw, 25px);
+    font-family: "IBM Flex Serif", serif;;
+      font-weight: 100;
+    font-style: normal;
+    margin-bottom: 0;
+    color: white;
+    transition: opacity 0.7s ease;
+}
+
+.flecha{
+    margin: -15%;    
+    font-size: clamp(15px, 4vw, 35px);
+}
+
+/* TÍTULO PORTADA */
+.container{
+
+}
+
+.title-card{
+    margin: 0px;
+    background-color: black;
+    display: inline-block;
+    padding: 20px;
+    margin-left: 10%;
+}
+
+h1, h2 {
+    color: white;
+        font-family: "Press Start 2P", system-ui;
+  font-style: normal;
+         font-size: clamp(25px, 3vw, 75px);
+        
+           
+        
+}
+
+.nombre {
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    -webkit-text-stroke: 0px;
+   
+}
+
+.subtitulo-portada {    
+    color: white;
+    font-family: "Press Start 2P", system-ui;
+    font-size: clamp(10px, 1vw, 20px);
+    font-weight: 100;
+    margin-top: 3%; 
+   
+
+}
+
+/*Contacto*/
+.contacto {
+    position: absolute;
+    top: clamp(20px, 3vw, 35px);
+    right: clamp(-10px, -1vw, 0px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+      width: 145px;
+    height: 145px;
+}
+
+.circulo-principal{
+    width: clamp(45px, 5vw, 65px);
+    height: clamp(45px, 5vw, 65px);
+
+    border-radius: 50%;
+
+    background-color: black;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: clamp(3px, 0.7vw, 8px) solid #a973ff;
+}
+.contacto svg {
+    width: clamp(22px, 2.5vw, 34px);
+    height: clamp(22px, 2.5vw, 34px);
+}
+
+/*Circulos pequeños*/
+
+.redes {
+   position: relative;
+    margin-top: 15px;
+
+}
+.circulo-red {
+      position: absolute;
+     width: clamp(25px, 3vw, 40px);
+    height: clamp(25px, 3vw, 40px);
+
+    border-radius: 50%;
+
+    background-color: black;
+    color: white;
+
+    border: clamp(2px, 0.5vw, 5px) solid #a973ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.circulo-red:nth-child(1) {
+    left: clamp(-105px, -8vw, -70px);
+    top: clamp(-70px, -5vw, -40px);
+    
+}
+
+.circulo-red:nth-child(1) svg {
+color: white;
+ transform: translate(1px, 2.4px);
+    
+}
+
+.circulo-red:nth-child(2) {
+    left: clamp(-73px, -5.5vw, -45px);
+    top: clamp(-14px, -1vw, -8px);
+}
+
+.circulo-red:nth-child(2) div {
+  background-color: white;
+    width: clamp(20px, 2.3vw, 40px);
+    height: clamp(20px, 2.3vw, 40px);
+    border-radius: 50%;
+}
+
+.circulo-red:nth-child(2) div svg {
+     transform: translate(1.98px, 2px);
+}
+
+.circulo-red:nth-child(3) {
+    left: clamp(-10px, -0.8vw, -6px);
+    top: clamp(-2px, -0.2vw, -1px);
+}
+
+.circulo-red:nth-child(3) div {
+  background-color: white;
+    width: clamp(20px, 2.3vw, 40px);
+    height: clamp(20px, 2.3vw, 40px);
+    border-radius: 50%;
+}
+
+.circulo-red:nth-child(3) div svg {
+     transform: translate(1px, 1.1px);
+}
+
+.contacto.abierto .circulo-red {
+    opacity: 1;
+}
+
+
+
+    /* Animación aparición letras */
+
+h1 span,
+.texto-presentacion span,
+.nombre
+ {
+    transition: opacity 0.3s ease;
+}
+
+.subtitulo-portada
+ {
+    transition: opacity 0.2s ease;
+}
+
+.scroll-indicator.parpadeando {
+    animation: parpadeo 2s ease-in-out infinite;
+}
+
+    /*Efectos de color texto*/
+
+
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 8px #fff,
+      0 0 18px #a855f7,
+      0 0 30px #a855f7,
+      0 0 45px #a855f7;
+  }
+
+  to {
+    text-shadow:
+      0 0 12px #fff,
+      0 0 25px #a855f7,
+      0 0 40px #a855f7,
+      0 0 60px #a855f7;
+  }
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+        color: #323232;
+    }
+
+    50% {
+        color: #dedede;
+    }
+}
+
