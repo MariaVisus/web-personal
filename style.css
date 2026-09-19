@@ -1,13 +1,17 @@
 * {
     margin: 0px;
+      box-sizing: border-box;
 }
 
 html, body {
-     overflow-x: hidden;
+    margin: 0;
 }
 
+
 .portada {
+    overflow-x: hidden;
     height: 100vh;
+    width: 100%;
     background-color: black;
     background-image:      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./rsc/fondo_transparente.png");
@@ -15,7 +19,6 @@ html, body {
     background-size: 50%;
     position: relative;
         height: 100vh;
-    width: 100vw;
     display: flex;
     align-items: center;
 }
@@ -44,9 +47,7 @@ html, body {
 }
 
 /* TÍTULO PORTADA */
-.container{
 
-}
 
 .title-card{
     margin: 0px;
@@ -58,12 +59,9 @@ html, body {
 
 h1, h2 {
     color: white;
-        font-family: "Press Start 2P", system-ui;
-  font-style: normal;
-         font-size: clamp(25px, 3vw, 75px);
-        
-           
-        
+    font-family: "Press Start 2P", system-ui;
+    font-style: normal;
+    font-size: clamp(25px, 3vw, 75px);
 }
 
 .nombre {
@@ -95,6 +93,8 @@ h1, h2 {
     align-items: center;
       width: 145px;
     height: 145px;
+    
+
 }
 
 .circulo-principal{
@@ -190,6 +190,10 @@ h1, h2 {
     height:70%;
     color: white;
 }
+.circulo-red:nth-child(2) svg {
+    width: 80%;
+    height: 80%;
+}
 
 .circulo-red:nth-child(3) svg {
     width: 60%;
@@ -254,3 +258,732 @@ h1 span,
     }
 }
 
+
+/*NAVEGACION*/
+
+.navegacion {
+    height: clamp(45px, 5vw, 70px);
+    background-color: #a973ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    
+
+    position: sticky;
+    top: 0;
+     z-index: 100;
+
+      left: 0;
+    width: 100%;
+
+    padding-right: 5%;;
+
+
+}
+
+.navegacion a,
+.navegacion span {
+    font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  700;
+    font-size: 1.5rem;  
+
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/*CUERPO*/
+
+#presentacion {
+    
+    background-color: #eae3ed;
+}
+
+#proyectos {
+    background-color: #b4adc0;
+}
+
+#cv {
+    background-color: #dbd2e4;
+}
+
+#contacto {
+    
+     background-color: #ece6f0;
+}
+
+    /*Secciones*/
+section { 
+    padding: 3% 5% 5% 5%;
+}
+section h2{
+    font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  700;
+    font-size: 3rem;
+     font-style: normal;
+
+    color: rgb(31, 31, 32);
+    text-decoration: none;
+
+}
+
+section p {
+    color: rgb(31, 31, 32);
+    font-size: 1.2rem;
+    font-family: "IBM Flex Serif", serif;;
+    font-weight: 300;
+    font-style: normal;
+    text-align: justify;
+}
+    /*Presentacion*/
+.presentacion-bloques{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.presentacion-bloques img {
+    width: 20%;
+    height: auto;
+}
+
+/*Proyectos*/
+
+#proyectos > p {
+
+    font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  700;
+    font-size: 1.3rem;
+     font-style: normal;
+     margin-top: 3%;
+     text-align: center;
+
+}
+
+.proyectos-bloques{
+    display: flex;
+
+    gap: 5%;
+}
+
+.proyectos > p {
+
+    font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  700;
+    font-size: 1.3rem;
+     font-style: normal;
+
+}
+/*Mini contratos y CRUD*/
+
+.mini-contratos{
+    flex:1;
+    
+    margin-top: 2%;
+}
+.mini-contratos h3{
+    font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  700;
+    font-size: 1.3rem;
+    font-style: normal;
+
+    margin-bottom: 2%;
+
+    color: rgb(31, 31, 32);
+
+}
+.mini-contratos-caja{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5%;
+    margin-top: 0.5%;
+    width: 100%;
+
+    
+
+}
+
+.mini-contratos:first-child {
+    border-right: 1px solid #9c97a5;;
+    padding-right: 5%;
+}
+
+.mini-contratos-caja img {
+    width: 100%;    
+    height: auto;
+    border: 2px solid rgb(31, 31, 32);
+    
+    margin-bottom: 5%;
+}
+
+
+
+/*Icono github*/
+.mini-contratos a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background-color: black;
+    color: white;
+    border-radius: 999px;
+
+     font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  700;
+    text-decoration: none;
+    
+     padding: clamp(6px, 0.6vw, 10px) clamp(10px, 1vw, 16px);
+     margin-top: clamp(12px, 1.5vw, 15px);
+
+}
+
+.mini-contratos svg {
+    width: 20px;
+    height: 20px;
+
+
+    fill: white;    
+}
+
+
+/*CV*/
+
+/*COLUMNA LATERAL*/
+.cv-caja{
+    display: flex;
+    flex-wrap: wrap;
+    gap:4%;
+
+    margin-top: 3%;
+    position: relative;
+
+}
+
+.cv-estudios {
+    flex: 1;
+    background-color: rgb(245, 240, 252);
+    border-radius: 25px;
+    border: 1px solid rgb(79, 79, 79);
+    padding: 2%;
+}
+
+.cv-historia-profesional {
+    flex: 3;
+}
+
+
+.cv-estudios h3{
+    font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  700;
+    font-size: 1.3rem;
+    font-style: normal;
+
+    margin-bottom: 2%;
+
+    color: rgb(31, 31, 32);
+}
+
+.cv-estudios h3:nth-of-type(2),
+.cv-estudios h3:nth-of-type(3) {
+    margin-top: 35px;
+}
+
+.cv-estudios h4{
+    font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  600;
+    font-size: 1rem;
+    font-style: normal;
+
+    margin-bottom: 2px;
+
+    color: rgb(31, 31, 32);
+}
+
+.cv-estudios p,
+.cv-estudios li{
+       color: rgb(31, 31, 32);
+    font-size: 1rem;
+    font-family: "Space Grotesk", sans-serif;   
+    font-weight: 300;
+    font-style: normal;
+    text-align: justify;
+}
+
+.cv-estudios ul {
+    padding-left: 0;
+}
+
+.cv-estudios li {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+p.equivalencia{
+    font-style: italic;
+}
+
+.cv-estudios li > p {
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+
+
+.cv-estudios li div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    font-size: 0.7rem;
+}
+
+
+/*EXPERIENCIA*/
+.experiencia {
+    position: relative;
+}
+
+.experiencia::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background-color: #a973ff;
+}
+
+.trabajo {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+.punto {
+    position: absolute;
+    left: 2px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #a973ff;
+}
+
+
+.trabajo-info h3{
+     font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  700;
+    font-size: 1.3rem;
+    font-style: normal;
+
+    color: rgb(31, 31, 32);
+}
+
+.trabajo-info p{
+     font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  500;
+    font-size: 1rem;
+    font-style: normal;
+    color: rgb(31, 31, 32);
+}
+.trabajo-info p:nth-child(3){
+     font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  300;
+    font-size: 1rem;
+    font-style: normal;
+    color: rgb(31, 31, 32);
+}
+
+.trabajo-info ul{
+    margin-top: 10px;
+    font-family: "IBM Flex Serif", serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+/*Botón descargar*/
+
+.boton-cv {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: black;
+    color: white;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/*CONTACTO SECCION*/
+
+.contacto-enlaces {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contacto-enlaces a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background-color: black;
+    color: white;
+    border-radius: 999px;
+
+     font-family: "Space Grotesk", sans-serif;    
+    font-optical-sizing: auto;
+    font-weight:  700;
+    text-decoration: none;
+    font-size: 1.rem;
+    
+     padding: clamp(6px, 0.6vw, 10px) clamp(10px, 1vw, 16px);
+     margin-top: clamp(12px, 1.5vw, 15px);
+
+
+}
+
+.contacto-enlaces svg {
+    width: 30px;
+    height: 30px;
+
+
+    fill: white;    
+}
+
+
+
+/*
+EJEMPLO USO FONT
+
+.space-grotesk-<uniquifier> {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:   Use a value from 300 to 700
+    font-style: normal;
+}
+*/
+
+
+/* =========================
+   RESPONSIVE - MÓVIL
+   ========================= */
+
+@media (max-width: 700px) {
+
+    /* Evita que cualquier elemento provoque scroll horizontal */
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       PORTADA
+       ========================= */
+
+    .portada {
+        width: 100%;
+        min-height: 100svh;
+        height: 100svh;
+        background-size: 100%;
+    }
+
+    .title-card {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    h1,
+    h2 {
+        font-size: clamp(20px, 7vw, 40px);
+    }
+
+    .subtitulo-portada {
+        font-size: clamp(9px, 2.8vw, 15px);
+        line-height: 1.5;
+    }
+
+
+    /* Contacto de la portada */
+
+    .contacto {
+        top: 20px;
+        right: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .circulo-principal {
+        width: 48px;
+        height: 48px;
+    }
+
+    .circulo-principal svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .circulo-red {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    /* Scroll */
+
+    .scroll-indicator {
+        bottom: 20px;
+        font-size: 12px;
+    }
+
+    .flecha {
+        font-size: 25px;
+    }
+
+
+    /* =========================
+       NAVEGACIÓN
+       ========================= */
+
+    .navegacion {
+        height: auto;
+        min-height: 50px;
+        justify-content: center;
+        gap: 6px;
+        padding: 10px 8px;
+        flex-wrap: wrap;
+    }
+
+    .navegacion a,
+    .navegacion span {
+        font-size: 0.85rem;
+    }
+
+
+    /* =========================
+       SECCIONES
+       ========================= */
+
+    section {
+        padding: 10% 6% 12% 6%;
+    }
+
+    section h2 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        margin-bottom: 25px;
+    }
+
+    section p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+       SOBRE MÍ
+       ========================= */
+
+    .presentacion-bloques {
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+
+        flex-direction: column-reverse;
+    }
+
+    .presentacion-bloques p {
+        width: 100%;
+    }
+
+    .presentacion-bloques img {
+        width: 55%;
+        max-width: 220px;
+        margin-bottom: 10%;
+    }
+
+
+    /* =========================
+       PROYECTOS
+       ========================= */
+
+    .proyectos-bloques {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .mini-contratos {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .mini-contratos:first-child {
+        border-right: none;
+        border-bottom: 1px solid #9c97a5;
+        padding-right: 0;
+        padding-bottom: 35px;
+    }
+
+    .mini-contratos h3 {
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+
+    .mini-contratos-caja {
+        width: 100%;
+    }
+
+    .mini-contratos-caja img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* =========================
+       CV
+       ========================= */
+
+    .cv-caja {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+    .cv-estudios,
+    .cv-historia-profesional {
+        width: 100%;
+        flex: none;
+    }
+
+
+    /* Botón descargar CV */
+
+    .boton-cv {
+        position: static;
+        align-self: flex-start;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+        padding: 9px 13px;
+    }
+
+
+    /* Estudios */
+
+    .cv-estudios {
+        padding: 25px 20px;
+    }
+
+    .cv-estudios h3 {
+        font-size: 1.2rem;
+    }
+
+    .cv-estudios h4 {
+        font-size: 0.95rem;
+    }
+
+    .cv-estudios p,
+    .cv-estudios li {
+        font-size: 0.95rem;
+    }
+
+    .cv-estudios li {
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+
+    .cv-estudios li div {
+        gap: 10px;
+    }
+
+
+    /* Experiencia */
+
+    .cv-historia-profesional {
+        width: 100%;
+    }
+
+    .cv-historia-profesional > h2 {
+        font-size: 2rem;
+    }
+
+    .trabajo {
+        padding-left: 32px;
+        margin-bottom: 30px;
+    }
+
+    .experiencia::before {
+        left: 8px;
+    }
+
+    .punto {
+        left: 0;
+        width: 17px;
+        height: 17px;
+    }
+
+    .trabajo-info h3 {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+
+    .trabajo-info p {
+        font-size: 0.9rem;
+    }
+
+    .trabajo-info ul {
+        font-size: 1rem;
+        padding-left: 20px;
+        line-height: 1.5;
+    }
+
+
+    /* =========================
+       CONTACTO
+       ========================= */
+
+    .contacto-enlaces {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .contacto-enlaces a {
+        font-size: 1rem;
+        margin-top: 5px;
+        width: auto;
+    }
+
+    .contacto-enlaces svg {
+        width: 25px;
+        height: 25px;
+    }
+}
